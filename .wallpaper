@@ -1,0 +1,3 @@
+#!/bin/bash
+
+feh --bg-fill "/home/andrzej3393/obrazy/tapety/`ls /home/andrzej3393/obrazy/tapety | shuf -n 1`"
