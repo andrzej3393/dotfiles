@@ -17,8 +17,14 @@
 #xfce-mcs-manager &
 
 tint2 &
+
 nm-applet &
-#dropboxd &
+
+dropboxd &
+
+mpd &
+
+mpdscribble &
 
 while :
 do
