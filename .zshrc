@@ -2,13 +2,18 @@
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
+setopt hist_expire_dups_first
+setopt inc_append_history
+setopt share_history
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
-setopt appendhistory autocd
 
 #misc
+setopt autocd
 unsetopt beep
 setopt print_exit_value
+setopt no_hup
+setopt auto_cd
 
 #keybindings
 bindkey -e
@@ -23,11 +28,17 @@ setopt completealiases
 zstyle ':completion:*' menu select
 zstyle ':completion:*:functions:' ignored-patterns '_*'
 zstyle ':completion:*' squeeze-slashes true
+zstyle ":completion:*:commands" rehash 1
 
 #prompt
 autoload -U promptinit
 promptinit
 prompt elite2 green
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git
+precmd () {vcs_info}
+setopt prompt_subst
+PS1="\$vcs_info_msg_0_$PS1"
 chpwd() {
   [[ -o interactive ]] || return
   print -Pn "\e]2;%~\a"
@@ -59,8 +70,11 @@ compdef '_files -g "*.{tar.bz2,tar.gz,bz2,gz,tar,tgz,tbz2,zip,Z,7z,rar,xz}"' ext
 
 #aliases
 alias ls='ls -lh --color=auto'
-alias buspirate='screen /dev/ttyUSB0 115200 8N1'
 
 #vars
 export BROWSER="firefox"
 export EDITOR="nano"
+
+#virtualenvwrapper
+export WORKON_HOME=~/Venvs
+source /usr/bin/virtualenvwrapper.sh
