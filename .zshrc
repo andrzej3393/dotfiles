@@ -80,6 +80,7 @@ alias ls='ls -lh --color=auto'
 #vars
 export BROWSER="firefox"
 export EDITOR="nano"
+export PYTHONSTARTUP="$HOME/.pythonrc.py"
 
 #virtualenvwrapper
 export WORKON_HOME=~/Venvs
