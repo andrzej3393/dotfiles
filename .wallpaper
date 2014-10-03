@@ -1,3 +1,4 @@
 #!/bin/bash
 
-feh --bg-fill "/home/andrzej3393/obrazy/tapety/`ls /home/andrzej3393/obrazy/tapety | shuf -n 1`"
+WALLPAPERS_DIR="/home/andrzej3393/Dropbox/Tapety/"
+feh --bg-fill "$WALLPAPERS_DIR`ls $WALLPAPERS_DIR | shuf -n 1`"
