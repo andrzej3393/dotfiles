@@ -5,6 +5,12 @@ SAVEHIST=1000
 setopt hist_expire_dups_first
 setopt inc_append_history
 setopt share_history
+
+# https://github.com/robbyrussell/oh-my-zsh/issues/1433
+# works on ubuntu:
+#bindkey "$terminfo[kcuu1]" history-search-backward
+#bindkey "$terminfo[kcud1]" history-search-forward
+# works on arch:
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
 
