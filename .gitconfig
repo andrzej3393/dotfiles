@@ -1,0 +1,7 @@
+[user]
+	email = andrzej3393@gmail.com
+	name = andrzej3393
+[push]
+	default = matching
+[color]
+	ui = true

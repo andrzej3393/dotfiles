@@ -1,9 +1,18 @@
 {
+	"in_process_packages":
+	[
+	],
+	"installed_dependencies":
+	[
+	],
 	"installed_packages":
 	[
 		"Anaconda",
-		"Bootstrap 3 Snippets",
 		"BracketHighlighter",
-		"SideBarEnhancements"
+		"GitGutter",
+		"Jinja2",
+		"Package Control",
+		"Pretty JSON",
+		"Project Manager"
 	]
 }

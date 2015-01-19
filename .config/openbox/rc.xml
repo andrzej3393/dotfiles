@@ -173,19 +173,45 @@
   </dock>
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
-    <keybind key="XF86AudioMute">
+    <keybind key="W-l">
       <action name="Execute">
-        <command>amixer set Master toggle</command>
+        <command>dm-tool lock</command>
       </action>
     </keybind>
+#    <keybind key="XF86AudioMute">
+#      <action name="Execute">
+#        <command>amixer set Master toggle</command>
+#      </action>
+#    </keybind>
     <keybind key="XF86AudioLowerVolume">
       <action name="Execute">
-        <command>amixer set Master 5%- unmute</command>
+        <command>amixer set Master 2%- unmute</command>
       </action>
     </keybind>
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
-        <command>amixer set Master 5%+ unmute</command>
+        <command>amixer set Master 2%+ unmute</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioPlay">
+      <action name="Execute">
+        <command>dbus-send --print-reply 
+--dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 
+org.mpris.MediaPlayer2.Player.PlayPause</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioNext">
+      <action name="Execute">
+        <command>dbus-send --print-reply 
+--dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 
+org.mpris.MediaPlayer2.Player.Next</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioPrev">
+      <action name="Execute">
+        <command>dbus-send --print-reply 
+--dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 
+org.mpris.MediaPlayer2.Player.Previous</command>
       </action>
     </keybind>
     <keybind key="W-r">

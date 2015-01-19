@@ -14,6 +14,11 @@
 		<item label="Log Out">
 			<action name="Exit"/>
 		</item>
+		<item label="Lock">
+			<action name="Execute">
+				<execute>xscreensaver-command -lock</execute>
+			</action>
+		</item>
 	</menu>
 	<menu id="root-menu" label="Openbox 3">
 		<item label="Firefox">
@@ -26,14 +31,24 @@
 				<execute>pidgin</execute>
 			</action>
 		</item>
+		<item label="Hipchat">
+			<action name="Execute">
+				<execute>hipchat</execute>
+			</action>
+		</item>
+		<item label="Skype">
+			<action name="Execute">
+				<execute>skype</execute>
+			</action>
+		</item>
 		<item label="Xchat">
 			<action name="Execute">
 				<execute>xchat</execute>
 			</action>
 		</item>
-		<item label="Geany">
+		<item label="Sublime">
 			<action name="Execute">
-				<execute>geany</execute>
+				<execute>subl3</execute>
 			</action>
 		</item>
 		<item label="Thunar">
@@ -44,6 +59,16 @@
 		<item label="Terminal">
 			<action name="Execute">
 				<execute>xfce4-terminal</execute>
+			</action>
+		</item>
+		<item label="Spotify">
+			<action name="Execute">
+				<execute>spotify</execute>
+			</action>
+		</item>
+		<item label="Synergy">
+			<action name="Execute">
+				<execute>synergy</execute>
 			</action>
 		</item>
 		<item label="Steam">

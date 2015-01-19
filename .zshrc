@@ -19,7 +19,6 @@ setopt autocd
 unsetopt beep
 setopt print_exit_value
 setopt no_hup
-setopt auto_cd
 
 #keybindings
 bindkey -e
@@ -76,6 +75,7 @@ compdef '_files -g "*.{tar.bz2,tar.gz,bz2,gz,tar,tgz,tbz2,zip,Z,7z,rar,xz}"' ext
 
 #aliases
 alias ls='ls -lh --color=auto'
+alias subl='subl3'
 
 #vars
 export BROWSER="firefox"
@@ -85,3 +85,10 @@ export PYTHONSTARTUP="$HOME/.pythonrc.py"
 #virtualenvwrapper
 export WORKON_HOME=~/Venvs
 source /usr/bin/virtualenvwrapper.sh
+
+#ssh-agent
+eval $(ssh-agent) &> /dev/null
+ssh-add &> /dev/null
+
+#huawei e3131 modem
+alias huawei='sudo usb_modeswitch -J -v 12d1 -p 1f01'
