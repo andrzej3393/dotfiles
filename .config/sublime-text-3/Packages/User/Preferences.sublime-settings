@@ -6,9 +6,9 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Vintage",
+		"Markdown",
 		"Pretty JSON",
-		"Markdown"
+		"Vintage"
 	],
 	"rulers":
 	[
