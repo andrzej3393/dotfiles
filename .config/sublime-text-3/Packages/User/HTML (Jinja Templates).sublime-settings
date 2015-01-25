@@ -1,0 +1,7 @@
+{
+    "extensions":
+    [
+        "jinja2",
+        "jinja"
+    ]
+}
