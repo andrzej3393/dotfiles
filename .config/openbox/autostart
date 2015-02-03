@@ -1,12 +1,10 @@
-#xrandr --dpi 143 &
+light-locker &
 
 synclient TouchpadOff=1 &
 
 tint2 &
 
 nm-applet &
-
-setxkbmap pl &
 
 megasync &
 

@@ -11,7 +11,7 @@ source ~/.antigen/antigen.zsh
 
 antigen use oh-my-zsh
 antigen bundles <<EOB
-#	git-prompt
+	git-prompt
 	pip
 	command-not-found
 	extract
@@ -29,6 +29,9 @@ antigen bundles <<EOB
 EOB
 
 antigen apply
+
+#auto rehash
+zstyle ":completion:*:commands" rehash 1
 
 #aliases
 alias ls='ls -lh --color=auto'
