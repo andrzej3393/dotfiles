@@ -6,6 +6,8 @@ tint2 &
 
 nm-applet &
 
+blueman-applet &
+
 megasync &
 
 sh ~/.wallpaper
