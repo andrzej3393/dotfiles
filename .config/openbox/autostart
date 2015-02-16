@@ -8,6 +8,6 @@ nm-applet &
 
 blueman-applet &
 
-megasync &
+sleep 10 && megasync &
 
 sh ~/.wallpaper
