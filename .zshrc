@@ -44,3 +44,6 @@ export PYTHONSTARTUP="$HOME/.pythonrc.py"
 
 #huawei e3131 modem
 alias huawei='sudo usb_modeswitch -J -v 12d1 -p 1f01'
+
+#thefuck
+alias fuck='$(thefuck $(fc -ln -1))'
