@@ -10,4 +10,6 @@ blueman-applet &
 
 sleep 10 && megasync &
 
+keepass &
+
 sh ~/.wallpaper
