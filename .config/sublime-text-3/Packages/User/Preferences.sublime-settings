@@ -10,5 +10,23 @@
 	],
 	"shift_tab_unindent": true,
 	"show_encoding": true,
-	"translate_tabs_to_spaces": true
+	"translate_tabs_to_spaces": true,
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		"bower_components",
+		"node_modules",
+		"*.egg-info",
+		".idea",
+		"venv",
+		"htmlcov",
+		".sass-cache",
+		"__pycache__",
+		".eggs",
+		".vagrant",
+		"build"
+	]
 }
