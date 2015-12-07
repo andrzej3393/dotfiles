@@ -167,6 +167,11 @@
   </dock>
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
+    <keybind key="W-F8">
+      <action name="Autorandr">
+        <command>autorandr --change</command>
+      </action>
+    </keybind>
     <keybind key="W-l">
       <action name="Execute">
         <command>light-locker-command -l</command>
