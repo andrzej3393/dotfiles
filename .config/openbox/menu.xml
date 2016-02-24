@@ -58,7 +58,7 @@
 		</item>
 		<item label="Terminal">
 			<action name="Execute">
-				<execute>xfce4-terminal</execute>
+				<execute>xfce4-terminal --maximize</execute>
 			</action>
 		</item>
 		<item label="Spotify">

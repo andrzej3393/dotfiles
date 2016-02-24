@@ -179,7 +179,7 @@
     </keybind>
     <keybind key="W-F1">
       <action name="Execute">
-        <command>xfce4-terminal</command>
+        <command>xfce4-terminal --maximize</command>
       </action>
     </keybind>
 #    <keybind key="XF86AudioMute">
