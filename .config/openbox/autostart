@@ -1,8 +1,8 @@
 light-locker &
 
-synclient TouchpadOff=1 &
-
 tint2 &
+
+autorandr -c &
 
 nm-applet &
 
