@@ -168,8 +168,8 @@
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
     <keybind key="W-F8">
-      <action name="Autorandr">
-        <command>autorandr --change</command>
+      <action name="Execute">
+        <command>autorandr -c</command>
       </action>
     </keybind>
     <keybind key="W-l">
@@ -182,21 +182,21 @@
         <command>xfce4-terminal --maximize</command>
       </action>
     </keybind>
-#    <keybind key="XF86AudioMute">
-#      <action name="Execute">
-#        <command>amixer set Master toggle</command>
-#      </action>
-#    </keybind>
-#    <keybind key="XF86AudioLowerVolume">
-#      <action name="Execute">
-#        <command>amixer set Master 2%- unmute</command>
-#      </action>
-#    </keybind>
-#    <keybind key="XF86AudioRaiseVolume">
-#      <action name="Execute">
-#        <command>amixer set Master 2%+ unmute</command>
-#      </action>
-#    </keybind>
+    <keybind key="XF86AudioMute">
+      <action name="Execute">
+        <command>pamixer -t</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioLowerVolume">
+      <action name="Execute">
+        <command>pamixer -u -d 2</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioRaiseVolume">
+      <action name="Execute">
+        <command>pamixer -u -i 2</command>
+      </action>
+    </keybind>
     <keybind key="XF86AudioPlay">
       <action name="Execute">
         <command>dbus-send --print-reply 
