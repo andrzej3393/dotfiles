@@ -1,3 +1,6 @@
+#run tmux by default
+if [ "$TMUX" = "" ]; then tmux; fi
+
 #history
 HISTFILE=~/.histfile
 HISTSIZE=10000
