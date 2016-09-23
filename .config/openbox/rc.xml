@@ -168,8 +168,8 @@
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
     <keybind key="W-F8">
-      <action name="Autorandr">
-        <command>autorandr --change</command>
+      <action name="Execute">
+        <command>autorandr -c</command>
       </action>
     </keybind>
     <keybind key="W-l">
@@ -189,12 +189,12 @@
     </keybind>
     <keybind key="XF86AudioLowerVolume">
       <action name="Execute">
-        <command>pamixer -d 2 -u</command>
+        <command>pamixer -u -d 2</command>
       </action>
     </keybind>
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
-        <command>pamixer -i 2 -u</command>
+        <command>pamixer -u -i 2</command>
       </action>
     </keybind>
     <keybind key="XF86AudioPlay">
