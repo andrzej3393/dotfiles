@@ -1,5 +1,0 @@
-<snippet>
-    <content><![CDATA[import traceback; traceback.print_exc()]]></content>
-    <tabTrigger>traceback</tabTrigger>
-    <scope>source.python</scope>
-</snippet>
