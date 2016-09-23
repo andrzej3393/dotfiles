@@ -41,6 +41,7 @@ alias subl='subl3'
 export BROWSER="firefox"
 export EDITOR="nano"
 export PYTHONSTARTUP="$HOME/.pythonrc.py"
+export PATH=$PATH:~/.local/bin
 
 #huawei e3131 modem
 alias huawei='sudo usb_modeswitch -J -v 12d1 -p 1f01'
