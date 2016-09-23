@@ -33,6 +33,7 @@ antigen bundles <<EOB
 	zsh-users/zsh-syntax-highlighting
 	zsh-users/zsh-completions src
 	zsh-users/zsh-history-substring-search
+    unixorn/autoupdate-antigen.zshplugin
 EOB
 
 antigen apply
