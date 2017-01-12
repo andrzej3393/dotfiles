@@ -1,6 +1,3 @@
-#run tmux by default
-if [ "$TMUX" = "" ]; then tmux; fi
-
 #history
 HISTFILE=~/.histfile
 HISTSIZE=10000
@@ -14,7 +11,7 @@ autoload bashcompinit
 bashcompinit
 
 #antigen part
-source ~/.antigen/antigen.zsh
+source /usr/share/zsh/scripts/antigen/antigen.zsh
 
 antigen use oh-my-zsh
 antigen bundles <<EOB
@@ -38,29 +35,17 @@ EOB
 
 antigen apply
 
-# gibo completion
-source /usr/share/zsh/site-functions/_gibo
-
 #auto rehash
 zstyle ":completion:*:commands" rehash 1
 
 #aliases
-alias ls='ls -lh --color=auto'
-alias subl='subl3'
-alias gitignore='gibo'
+alias ls='ls -lah --color=auto'
 
 #vars
 export BROWSER="firefox"
 export EDITOR="nano"
-export PYTHONSTARTUP="$HOME/.pythonrc.py"
 export PATH=$PATH:~/.local/bin
 
 #golang
 export GOPATH=$HOME/go:/usr/lib/go
 export PATH=$PATH:$GOPATH/bin
-
-#huawei e3131 modem
-alias huawei='sudo usb_modeswitch -J -v 12d1 -p 1f01'
-
-#thefuck
-alias fuck='$(thefuck $(fc -ln -1))'
