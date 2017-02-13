@@ -15,22 +15,32 @@ source /usr/share/zsh/scripts/antigen/antigen.zsh
 
 antigen use oh-my-zsh
 antigen bundles <<EOB
-	git-prompt
-	pip
-	command-not-found
-	extract
-	archlinux
-	ssh-agent
-	sudo
-	systemd
-#	virtualenv
-	virtualenvwrapper
-	vagrant
+    adb
+    bgnotify
+    celery
+    command-not-found
+    django
+    extract
+    git
+    git-prompt
+    gitignore
+    heroku
+    httpie
+    pip
+    python
+    ssh-agent
+    sudo
+    supervisor
+    systemd
+    vagrant
+    virtualenv
+    virtualenvwrapper
 	
-	zsh-users/zsh-syntax-highlighting
-	zsh-users/zsh-completions src
-	zsh-users/zsh-history-substring-search
-    unixorn/autoupdate-antigen.zshplugin
+    djui/alias-tips
+    supercrabtree/k
+    zsh-users/zsh-syntax-highlighting
+    zsh-users/zsh-completions src
+    zsh-users/zsh-history-substring-search
 EOB
 
 antigen apply
