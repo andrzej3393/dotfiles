@@ -11,7 +11,7 @@ autoload bashcompinit
 bashcompinit
 
 #antigen part
-source /usr/share/zsh/scripts/antigen/antigen.zsh
+source /usr/share/zsh/share/antigen.zsh
 
 antigen use oh-my-zsh
 antigen bundles <<EOB
@@ -39,7 +39,7 @@ antigen bundles <<EOB
     djui/alias-tips
     supercrabtree/k
     zsh-users/zsh-syntax-highlighting
-    zsh-users/zsh-completions src
+    zsh-users/zsh-completions
     zsh-users/zsh-history-substring-search
 EOB
 
@@ -49,7 +49,7 @@ antigen apply
 zstyle ":completion:*:commands" rehash 1
 
 #aliases
-alias ls='ls -lah --color=auto'
+alias ls='ls -lh --color=auto'
 
 #vars
 export BROWSER="firefox"
