@@ -7,3 +7,10 @@
 	ui = true
 [branch]
 	autosetuprebase = always
+[core]
+	excludesfile = ~/.gitignore
+[alias]
+	co = checkout
+	st = status
+	br = branch
+	ci = commit
