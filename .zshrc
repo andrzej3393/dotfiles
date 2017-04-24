@@ -59,3 +59,6 @@ export PATH=$PATH:~/.local/bin
 #golang
 export GOPATH=$HOME/go:/usr/lib/go
 export PATH=$PATH:$GOPATH/bin
+
+#show virtualenv name in prompt
+unset VIRTUAL_ENV_DISABLE_PROMPT
