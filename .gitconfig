@@ -1,16 +1,19 @@
-[user]
-	email = andrzej3393@gmail.com
-	name = andrzej3393
 [push]
-	default = matching
+    default = matching
 [color]
-	ui = true
+    ui = true
 [branch]
-	autosetuprebase = always
+    autosetuprebase = always
 [core]
-	excludesfile = ~/.gitignore
+    excludesfile = ~/.gitignore
 [alias]
-	co = checkout
-	st = status
-	br = branch
-	ci = commit
+    co = checkout
+    st = status
+    br = branch
+    ci = commit
+[diff]
+    tool = meld
+[difftool]
+    prompt = false
+[difftool "meld"]
+    cmd = meld "$LOCAL" "$REMOTE"
