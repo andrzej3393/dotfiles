@@ -1,4 +1,4 @@
-#history
+## history
 HISTFILE=~/.histfile
 HISTSIZE=100000
 SAVEHIST=100000
@@ -6,12 +6,12 @@ setopt hist_expire_dups_first
 setopt inc_append_history
 setopt share_history
 
-#bashcompinit
+## bashcompinit
 autoload bashcompinit
 bashcompinit
 
-#antigen part
-source /usr/share/zsh/share/antigen.zsh
+## antigen part
+source {{ antigen_directory }}/antigen.zsh
 
 antigen use oh-my-zsh
 antigen bundles <<EOB
@@ -58,30 +58,35 @@ EOB
 
 antigen apply
 
-#auto rehash
+## auto rehash
 zstyle ":completion:*:commands" rehash 1
 
-#aliases
+## aliases
 alias ls='ls -lh --color=auto'
 alias dc='docker-compose'
 
-#vars
+## vars
 export BROWSER="firefox"
 export EDITOR="nano"
 export PATH=$PATH:~/.local/bin
 
-#ruby
-#export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+## ruby
+if (( $+commands[ruby] ))
+then
+    export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+fi
 
-#show virtualenv name in prompt
+## pyton
+# show virtualenv name in prompt
 unset VIRTUAL_ENV_DISABLE_PROMPT
 
-#nvm
-#source /usr/share/nvm/init-nvm.sh
+# set virtualenvwrapper home
+export WORKON_HOME="$HOME/.virtualenvs"
 
-#pyenv
-#export PYENV_ROOT="$HOME/.pyenv"
-#export PATH="$PYENV_ROOT/bin:$PATH"
-#if command -v pyenv 1>/dev/null 2>&1; then
-#  eval "$(pyenv init -)"
-#fi
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if (( $+commands[pyenv] ))
+then
+  eval "$(pyenv init -)"
+fi

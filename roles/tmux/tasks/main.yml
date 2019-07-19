@@ -1,0 +1,11 @@
+- name: Install tmux
+  package:
+    name: tmux
+    state: present
+  become: yes
+
+- name: Copy tmux config
+  copy:
+    src: "{{ role_path }}/files/.tmux.conf"
+    dest: ~/.tmux.conf
+    force: yes

@@ -1,0 +1,11 @@
+- name: Install nano
+  package:
+    name: nano
+    state: present
+  become: yes
+
+- name: Copy nano config
+  copy:
+    src: "{{ role_path }}/files/.nanorc"
+    dest: ~/.nanorc
+    force: yes

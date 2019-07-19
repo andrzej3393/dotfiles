@@ -1,0 +1,22 @@
+- name: Install ZSH
+  package:
+    name: zsh
+    state: present
+  become: yes
+
+- name: Download Antigen
+  git:
+    repo: git@github.com:zsh-users/antigen.git
+    dest: "{{ antigen_directory }}"
+
+- name: Render .zshrc
+  template:
+    src: "{{ role_path }}/templates/.zshrc.j2"
+    dest: ~/.zshrc
+    force: yes
+
+- name: Change shell to ZSH
+  user:
+    name: "{{ ansible_user_id }}"
+    shell: /bin/zsh
+    append: yes

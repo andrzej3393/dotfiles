@@ -1,0 +1,11 @@
+- name: Install git
+  package:
+    name: git
+    state: present
+  become: yes
+
+- name: Copy git config
+  copy:
+    src: "{{ role_path }}/files/.gitconfig"
+    dest: ~/.gitconfig
+    force: yes
