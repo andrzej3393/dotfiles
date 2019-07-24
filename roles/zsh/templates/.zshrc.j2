@@ -13,6 +13,9 @@ bashcompinit
 ## antigen part
 source {{ antigen_directory }}/antigen.zsh
 
+# prompt
+antigen theme denysdovhan/spaceship-prompt
+
 antigen use oh-my-zsh
 antigen bundles <<EOB
     adb
@@ -57,9 +60,6 @@ antigen bundles <<EOB
 EOB
 
 antigen apply
-
-## prompt
-antigen theme denysdovhan/spaceship-prompt
 
 ## auto rehash
 zstyle ":completion:*:commands" rehash 1
