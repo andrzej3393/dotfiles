@@ -1,5 +1,5 @@
 set autoindent
-set const
+set linenumbers
 set morespace
 set mouse
 set nohelp
