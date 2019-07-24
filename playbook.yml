@@ -3,7 +3,11 @@
   vars_files:
     - ./vars/all.yml
   roles:
-    - git
-    - nano
-    - tmux
-    - zsh
+    - role: git
+      tags: [git]
+    - role: nano
+      tags: [nano]
+    - role: tmux
+      tags: [tmux]
+    - role: zsh
+      tags: [zsh]
