@@ -81,11 +81,7 @@ then
     export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 fi
 
-## pyton
-# show virtualenv name in prompt
-unset VIRTUAL_ENV_DISABLE_PROMPT
-
-# pyenv
+## pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 if (( $+commands[pyenv] ))
