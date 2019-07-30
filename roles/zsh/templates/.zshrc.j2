@@ -10,6 +10,9 @@ setopt share_history
 autoload bashcompinit
 bashcompinit
 
+## set virtualenvwrapper home
+export WORKON_HOME="$HOME/.virtualenvs"
+
 ## antigen part
 source {{ antigen_directory }}/antigen.zsh
 
@@ -81,9 +84,6 @@ fi
 ## pyton
 # show virtualenv name in prompt
 unset VIRTUAL_ENV_DISABLE_PROMPT
-
-# set virtualenvwrapper home
-export WORKON_HOME="$HOME/.virtualenvs"
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
