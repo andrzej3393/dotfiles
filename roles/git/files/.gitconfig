@@ -13,6 +13,7 @@
     ci = commit
 [diff]
     tool = meld
+    colorMoved = zebra
 [difftool]
     prompt = false
 [difftool "meld"]
