@@ -1,20 +1,40 @@
-[push]
-    default = matching
-[color]
-    ui = true
-[branch]
-    autosetuprebase = always
-[core]
-    excludesfile = ~/.gitignore
 [alias]
     co = checkout
     st = status
-    br = branch
-    ci = commit
+    uncommit = reset --soft HEAD~1
+    root = rev-parse --show-toplevel
+[branch]
+    autosetuprebase = always
+    sort = -committerdate
+[color]
+    ui = true
+[commit]
+    gpgsign = true
+[core]
+    excludesfile = ~/.gitignore
 [diff]
-    tool = meld
     colorMoved = zebra
+    colorMovedWS = allow-indentation-change
+    context = 10
 [difftool]
     prompt = false
-[difftool "meld"]
-    cmd = meld "$LOCAL" "$REMOTE"
+[fetch]
+    prune = true
+[gpg]
+    format = ssh
+[help]
+    autocorrect = prompt
+[log]
+    date = iso
+[pull]
+    rebase = true
+[push]
+    default = current
+    autoSetupRemote = true
+[rebase]
+    autosquash = true
+    autostash = true
+[rerere]
+    enabled = true
+[status]
+    showUntrackedFiles = all
